@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Jadwal Kegiatan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>📅 Jadwal Kegiatan</h2>
+  <div>
+    <select id="filter" onchange="render()">
+      <option value="all">Semua</option>
+      <option value="done">Done</option>
+      <option value="progress">Working on it</option>
+    </select>
+    <button onclick="toggleDark()">🌙</button>
+  </div>
+</header>
+
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>✔</th>
+        <th>Kegiatan</th>
+        <th>Jenis</th>
+        <th>Status</th>
+        <th>Timeline</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody id="taskTable"></tbody>
+  </table>
+</div>
+
+<button class="fab" onclick="openModal()">+</button>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h3 id="modalTitle">Tambah Kegiatan</h3>
+
+    <input id="name" placeholder="Nama kegiatan">
+    <select id="type">
+      <option>Penting</option>
+      <option>Santai</option>
+      <option>Wajib</option>
+    </select>
+
+    <input type="date" id="start">
+    <input type="date" id="end">
+    <input type="time" id="time">
+
+    <select id="status">
+      <option value="progress">Working on it</option>
+      <option value="done">Done</option>
+    </select>
+
+    <button onclick="saveTask()">Simpan</button>
+    <button class="cancel" onclick="closeModal()">Batal</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

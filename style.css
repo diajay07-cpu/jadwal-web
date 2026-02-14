@@ -1,0 +1,85 @@
+:root {
+  --bg: #f5f6fa;
+  --card: #fff;
+  --text: #000;
+}
+
+.dark {
+  --bg: #1e1e2f;
+  --card: #2c2c3c;
+  --text: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.container {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.badge {
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: white;
+}
+
+.done { background: #4CAF50; }
+.progress { background: #fbc531; }
+
+.fab {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 32px;
+  background: #6c5ce7;
+  color: white;
+  border: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: var(--card);
+  margin: 100px auto;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+}
